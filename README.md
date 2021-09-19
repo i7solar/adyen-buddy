@@ -4,12 +4,14 @@ With the assistance of the Adyen scripts from /collections, you can use this scr
 
 ## How do I use this?
 
+- Use main function ``EncryptCardWithAdyen(argument1,argument2)``
+
 - Based on the version of Adyen you'll need edit the adyenBuddy constant on Line 1 from adyen.js based on your version.
   ex. ``const adyenBuddy = require("./collection/0_1_23.js");``
-  
-- Replace the ADYEN_KEY constant with the Adyen key from the website.
+   
+- Replace the ADYEN_KEY constant with the Adyen key from the website. - Argument 1
 
-- Input your own CARD_DATA object into the second argument with your own values and tada! ✨
+- Input your own CARD_DATA object into the second argument with your own values and tada! ✨ - Argument 2
 
 
 ## Example
