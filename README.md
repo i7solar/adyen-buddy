@@ -1,4 +1,4 @@
-# Adyen Buddy 🤗
+# Adyen Buddy
 
 With the assistance of the Adyen scripts from /collections, you can use this script to encrypt your payment information with Adyen easy!
 
