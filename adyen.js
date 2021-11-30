@@ -8,11 +8,7 @@ function EncryptCardWithAdyen(adyenKey, cardNumber, expiryMonth, expiryYear, sec
     try { // Wrap it in a try catch if any errors happen.
 
         // Create an adyen instance
-        var adyenInstance = adyenBuddy.createEncryption(adyenKey, {});
-
-        // Validate the card data
-        adyenInstance.validate(cardData);
-        
+        var adyenInstance = adyenBuddy.createEncryption(adyenKey, {});    
         
         //Encrypt the card data
         var encryptedData = { // Card data from: https://docs.adyen.com/development-resources/test-cards/test-card-numbers#american-express-amex
@@ -33,6 +29,9 @@ function EncryptCardWithAdyen(adyenKey, cardNumber, expiryMonth, expiryYear, sec
                 generationtime: new Date().toISOString(),
             }),
         };
+
+        // Validate the card data
+        adyenInstance.validate(encryptedData);
         
         // Assign adyenObject with values
         return adyenObject = {
